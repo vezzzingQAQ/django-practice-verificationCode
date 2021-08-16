@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<!--!+Tab自动生成-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Django视图层</title>
+    <style>
+        ul li a{
+            margin-left: 60px;
+            text-decoration: none;
+        }
+        ul li h4{
+            margin-left: 30px;
+        }
+        ul li{
+            list-style: none;
+        }
+    </style>
+</head>
+<body>
+    <h2>Django视图层</h2>
+    <ul>
+        <li><h3>HttpResponse对象</h3></li>
+            <li><h4>1.简单HttpResponse</h4></li>
+                <li><a href="{% url 'simplehttpresponse' %}">1.简单HttpResponse</a></li><!--反向解析生成动态URL地址【name="..."】-->
+            <li><h4>2.生成错误页面</h4></li>
+                <li><a href="{% url 'raise404' %}">1.返回404错误页面</a></li>
+                <li><a href="{% url 'raise403' %}">2.返回403错误页面【访问被拒绝】</a></li>
+            <li><h4>3.重定向</h4></li>
+                <li><a href="{% url 'redirectpage' %}">1.redirec重定向到1.1.简单HttpResponse</a> url里写的是...一回车就会改变</li>
+                <li><a href="{% url 'jsjumppage' %}">1.js重定向到1.1.简单HttpResponse</a></li>
+            <li><h4>4.基于类的视图</h4></li>
+                <li><a href="{% url 'basedonclass' %}">1.基于类的视图</a></li>
+            <li><h4>5.响应JSON格式</h4></li>
+                <li><a href="{% url 'responsejson' %}">1.响应JSON格式</a></li>
+            <li><h4>6.设置cookie</h4></li>
+                <li><a href="{% url 'usecookie' %}">1.设置cookie</a></li>
+                <li><a href="{% url 'getcookie' %}">2.获取cookie</a></li>
+                <li><a href="{% url 'countaccess' %}">3.用cookie做页面访问次数记录器</a></li>
+        <li><h3>HttpRequest对象</h3></li>
+            <li><h4>1.path,method,encoding</h4></li>
+                <li><a href="{% url 'getpathmethodencoding' %}">1.获取path,method,encoding</a></li>
+
+    </ul>
+</body>
+</html>
