@@ -41,7 +41,11 @@
         <li><h3>HttpRequest对象</h3></li>
             <li><h4>1.path,method,encoding</h4></li>
                 <li><a href="{% url 'getpathmethodencoding' %}">1.获取path,method,encoding</a></li>
+            <li><h4>2.直接在URL中传递参数【请求地址参数】</h4></li>
+                <li><a href="{% url 'processurlpara' %}?id=100&name=zhangsan&age=22">1.直接在URL中传递参数</a></li>
 
-    </ul>
+        <li><h3>验证码</h3></li>
+                <li><a href="{% url 'verifypage' %}">验证码</a></li>
+        </ul>
 </body>
 </html>

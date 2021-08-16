@@ -1,4 +1,3 @@
-from django.http import response
 from django.http.response import HttpResponse, HttpResponseNotFound,JsonResponse
 from django.shortcuts import redirect, render
 
@@ -69,5 +68,13 @@ def countAccess(request):
 def getPathMethodEncoding(request):
     tempStr="<p>请求路径:"+request.path+"</p>"
     tempStr+="<p>请求方法:"+request.method+"</p>"
-    #tempStr+="<p>请求编码:"+request.encoding+"</p>"
+    tempStr+="<p>请求编码:"+str(request.encoding)+"</p>"
+    return(HttpResponse(tempStr))
+
+#处理url中传递的参数
+def processUrlPara(request):
+    #返回一个QueryDict对象
+    tempStr="<p>id="+request.GET["id"]+"</p>"
+    tempStr+="<p>name="+request.GET["name"]+"</p>"
+    tempStr+="<p>age="+request.GET["age"]+"</p>"
     return(HttpResponse(tempStr))

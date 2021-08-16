@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}<!--大坑-->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>verify</title>
+    <script type="text/javascript" src="static/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            $("#verifycodeChange").css("cursor","pointer").click(function(){
+                $("#verifycode").attr("src",$("#verifycode").attr("src")+1)
+            })
+        })
+    </script>
+    <style>
+        section{
+            text-align: center;
+            margin-top: 100px;
+        }
+        span::selection{
+            background-color: transparent;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <img id="verifycode" src="/verify?1" alt="error">
+        <br>
+        <span id="verifycodeChange">看不清?换一个</span>
+    </section>
+</body>
+</html>
